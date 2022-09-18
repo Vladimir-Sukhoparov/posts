@@ -7,7 +7,7 @@ export const Posts = ({ listPosts }) => {
   return (
     <div className="App-posts">
       {listPosts?.map((item) => (
-        <Post key={item._id} itemPost={item} />
+        <Post key={item.id} itemPost={item} />
       ))}
     </div>
   );

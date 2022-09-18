@@ -7,7 +7,7 @@ export const Albums = ({ listAlbums }) => {
   return (
     <div className="App-albums">
       {listAlbums?.map((item) => (
-        <Album key={item._id} itemAlbum={item} />
+        <Album key={item.id} itemAlbum={item} />
       ))}
     </div>
   );

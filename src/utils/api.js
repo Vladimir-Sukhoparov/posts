@@ -20,6 +20,12 @@ class Api {
 
     return fetch(requestUrl).then(onResponce);
   }
+
+  getPhotos() {
+    const requestUrl = `${this._url}/photos?_limit=6`;
+
+    return fetch(requestUrl).then(onResponce);
+  }
 }
 
 export default new Api(config);

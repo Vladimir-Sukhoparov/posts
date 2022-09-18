@@ -19,9 +19,15 @@ export const Header = () => {
         </Typography>
       </Link>
 
-      <Link to="/Albums">
+      <Link to="/albums">
         <Typography sx={{ ml: 3, color: "text.secondary" }} variant="h6">
           Albums
+        </Typography>
+      </Link>
+
+      <Link to="/photos">
+        <Typography sx={{ ml: 3, color: "text.secondary" }} variant="h6">
+          Photos
         </Typography>
       </Link>
     </div>

@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
-import { Route, Routes } from "react-router-dom";
-import { Home} from "./components/Home";
+import React, { useState, useEffect } from "react";
+import { Route, Routes} from "react-router-dom";
+import { Home } from "./components/Home";
 import { Albums } from "./components/Albums";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -8,10 +8,12 @@ import { Posts } from "./components/Posts";
 import api from "./utils/api";
 
 import "./App.css";
-
+import { Photos } from "./components/Photos";
+import { Card } from "./components/Card";
 
 function App() {
   const [albums, setAlbums] = useState(null);
+  
 
   useEffect(() => {
     api
@@ -29,31 +31,26 @@ function App() {
       .catch((err) => alert(err));
   }, []);
 
-  return (
+  const [photos, setPhotos] = useState(null);
 
+  useEffect(() => {
+    api
+      .getPhotos()
+      .then((list) => setPhotos(list))
+      .catch((err) => alert(err));
+  }, []);
+
+  return (
     <div className="App">
       <Header />
       <div className="content-container">
-      
-         <Routes>
-      <Route path='posts/' element={
-          <div>                                   
-          <Posts listPosts={posts}/>
-          </div>
-      }/>
-      <Route path='albums/' element={
-          <div>                                   
-          <Albums listAlbums={albums}/>
-          </div>
-      }/>
-      <Route path="/" element={
-        <div>
-          <Home />
-        </div>
-      }/>
-      </Routes>
-      
-      
+        <Routes>
+          <Route path="posts/" element={<Posts listPosts={posts} />} />
+          <Route path="albums" element={<Albums listAlbums={albums} />} />
+          <Route path="photos" element={<Photos listPhotos={photos} />} />
+          <Route path="card/" element={<Card />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
       </div>
       <Footer />
     </div>
@@ -61,4 +58,3 @@ function App() {
 }
 
 export default App;
-
