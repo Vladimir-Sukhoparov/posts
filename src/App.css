@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+ height: 100%;
+ background-color: aqua;
+}
+
+.content-container{
+  max-width: 1380px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  width: 90%;
+  
+}

@@ -1,0 +1,6 @@
+.App-header{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
