@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Route, Routes } from "react-router-dom";
-import { About } from "./components/About";
+import { Home} from "./components/Home";
 import { Albums } from "./components/Albums";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -48,7 +48,7 @@ function App() {
       }/>
       <Route path="/" element={
         <div>
-          <About/>
+          <Home />
         </div>
       }/>
       </Routes>

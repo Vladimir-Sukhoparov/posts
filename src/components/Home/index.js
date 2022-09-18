@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-export const About = () => {
+export const Home = () => {
   return (
     <div className="App-home">
       <h2>
