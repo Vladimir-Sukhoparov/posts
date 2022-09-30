@@ -1,7 +1,7 @@
 import React from "react";
 import { Album } from "../Album";
 
-import "./index.css";
+import "./index.css"
 
 export const Albums = ({ listAlbums }) => {
   return (

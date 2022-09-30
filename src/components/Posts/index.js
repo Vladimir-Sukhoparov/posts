@@ -1,7 +1,7 @@
 import React from "react";
 import { Post } from "../Post";
 
-import "./index.css";
+import "./index.css"
 
 export const Posts = ({ listPosts }) => {
   return (
