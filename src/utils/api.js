@@ -1,7 +1,7 @@
 import { config } from "./config";
 
 const onResponce = (res) => {
-  return res.json();
+  return res.ok ? res.json() : Promise.reject(`Ошибка : ${res.status}`);
 };
 
 class Api {
@@ -11,12 +11,6 @@ class Api {
 
   getPosts() {
     const requestUrl = `${this._url}/posts?_limit=6`;
-
-    return fetch(requestUrl).then(onResponce);
-  }
-
-  getAlbums() {
-    const requestUrl = `${this._url}/albums?_limit=6`;
 
     return fetch(requestUrl).then(onResponce);
   }
