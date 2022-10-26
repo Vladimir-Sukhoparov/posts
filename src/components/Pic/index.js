@@ -6,25 +6,27 @@ import "./index.css";
 export const Pic = () => {
   const [urlPic, setUrlPic] = useState("https://picsum.photos/800/600");
 
-  // eslint-disable-next-line
-  let url;
   let handleClick = () => {
     setUrlPic(null);
-    url = fetch("https://picsum.photos/800/600");
+    fetch("https://picsum.photos/800/600").then((res) => setUrlPic(res.url));
   };
-
+  
   useEffect(() => {
-    setUrlPic("https://picsum.photos/800/600");
+    console.log(urlPic);
+
   }, [urlPic]);
+
+
+  //добавить иконку из миюай
+
   return (
     <div className="App-pic">
       <Link to="/pic">
-        {/* <div className="loader" /> */}
         <img
           className="pic"
           src={urlPic}
           onClick={handleClick}
-          alt="download"
+          alt='download...'
         />
       </Link>
     </div>
