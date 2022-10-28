@@ -1,6 +1,5 @@
 .App-home{
-    min-height: calc(100vh - 200px);
-    
+    min-height: calc(100vh - 196px);
     display: flex;
     align-items: center;
     justify-content: center;

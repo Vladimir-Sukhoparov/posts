@@ -5,16 +5,20 @@ import { Link } from "react-router-dom";
 import "./index.css";
 
 export const Pic = () => {
-  const [urlPic, setUrlPic] = useState("https://picsum.photos/800/600");
+  let bodyWidth = parseInt(getComputedStyle(document.body).width) - 250;
+  let bodyHeight = parseInt(getComputedStyle(document.body).height) - 200;
 
+  const [urlPic, setUrlPic] = useState(
+    `https://picsum.photos/${bodyWidth}/${bodyHeight}`
+  );
   let handleClick = () => {
     setUrlPic(null);
-    fetch("https://picsum.photos/800/600").then((res) => setUrlPic(res.url));
+    fetch(`https://picsum.photos/${bodyWidth}/${bodyHeight}`).then((res) =>
+      setUrlPic(res.url)
+    );
   };
 
-  useEffect(() => {
-    console.log(urlPic);
-  }, [urlPic]);
+  useEffect(() => {}, [urlPic]);
 
   return (
     <div className="App-pic">

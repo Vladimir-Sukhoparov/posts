@@ -1,6 +1,6 @@
 .App-posts{
     position: relative;
-    min-height: calc(85vh - 50px - 50px);
+    min-height: calc(100vh - 118px);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 3fr);

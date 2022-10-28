@@ -9,6 +9,7 @@ import api from "./utils/api";
 import "./App.css";
 import { Photos } from "./components/Photos";
 import { Pic } from "./components/Pic";
+import { SidePanel } from "./components/SidePanel";
 
 function App() {
   const [posts, setPosts] = useState(null);
@@ -32,15 +33,16 @@ function App() {
   return (
     <div className="App">
       <Header />
-    <div className="content">
-      <div className="content-container">
-        <Routes>
-          <Route path="/posts" element={<Posts listPosts={posts} />} />
-          <Route path="/photos" element={<Photos listPhotos={photos} />} />
-          <Route path="/pic" element={<Pic />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
+      <div id="content" className="content">
+        <SidePanel />
+        <div className="content-container">
+          <Routes>
+            <Route path="/posts" element={<Posts listPosts={posts} />} />
+            <Route path="/photos" element={<Photos listPhotos={photos} />} />
+            <Route path="/pic" element={<Pic />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
       </div>
       <Footer />
     </div>
