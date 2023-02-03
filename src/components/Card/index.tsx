@@ -1,15 +1,16 @@
-import React from "react";
+import React from 'react';
 
 import {  Divider } from "@mui/material";
 import { Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 
-import "../../App.css";
+import styles from './index.module.css'
 
-export const Post = ({ itemPost }) => {
+
+export const Card = (itemPost:any) => {
   return (
-    <div className="App-content">
+    <div className={styles.card}>
       <ListItem>
         <ListItemText
           primary={<Typography variant="body1">UserID: {itemPost.userId}</Typography>}
@@ -34,3 +35,4 @@ export const Post = ({ itemPost }) => {
     </div>
   );
 };
+

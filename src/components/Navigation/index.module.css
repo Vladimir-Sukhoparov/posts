@@ -1,0 +1,42 @@
+.nav {
+  background: rgb(240, 240, 240);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-height: 78px;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  float: right;
+  width: 100%;
+  margin-right: 25px;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  margin: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: dimgrey;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 20px;
+  color: dimgrey;
+}
+
+h1 a {
+  text-decoration: none;
+  color: dimgrey;
+}
