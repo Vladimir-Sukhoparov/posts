@@ -1,0 +1,25 @@
+.post {
+  margin: 0;
+  padding: 0 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  li {
+    list-style-type: none;
+    margin: 20px 0;
+    a {
+      text-decoration: none;
+      color: dimgray;
+      font-size: 18px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      color: dimgray;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  }
+}

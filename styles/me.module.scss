@@ -1,0 +1,38 @@
+.about {
+  text-align: start;
+  padding: 50px;
+  background-color: #f7f7f7;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+.box{
+  margin: 0 50px;
+  }
+
+  h2 {
+    font-weight: normal;
+    color: dimgrey;
+  }
+
+  p {
+    font-weight: normal;
+    color: dimgrey;
+    a{
+      text-decoration: none;
+      color: rgb(133, 133, 233);
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+   
+  }
+
+  img {
+    margin: 0 50px;
+    max-height: 350px;
+    max-width: 450px;
+  }
+}

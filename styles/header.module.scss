@@ -1,0 +1,35 @@
+.nav {
+  background: rgb(240, 240, 240);
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  max-height: 78px;
+  a {
+    text-decoration: none;
+    color: dimgrey;
+    font-size: 18px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    //width: 1%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: dimgrey;
+        font-size: 18px;
+        margin: 0 10px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
